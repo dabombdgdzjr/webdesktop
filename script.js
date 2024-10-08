@@ -227,17 +227,6 @@ var about = `<div class="window noselect">
         </section>
       </div>
     </div>`
-
-var paint = `<div class="window noselect">
-      <div class="title-bar"><div class="title-bar-text">aboutme.html</div><div class="title-bar-controls">
-        <button aria-label="Minimize"></button>
-        <button aria-label="Maximize"></button>
-        <button aria-label="Close" onclick="this.parentNode.parentNode.parentNode.remove(this)"></button>
-      </div></div>
-      <div class="window-body flexible" style="margin:0;padding:0;">
-        <iframe class="flexing" src="https://jspaint.app">
-      </div>
-    </div>`
 function createElementFromHTML(htmlString) {
   var div = document.createElement('div');
   div.innerHTML = htmlString.trim();
@@ -255,6 +244,21 @@ function createNewWindow(windowType) {
   initDragElement("window", "title-bar");
   initResizeElement("window");
 }
+function openFile(path, ext) {
+  if (ext == "jpg" || ext == "png"){
+    return `<div class="window noselect">
+      <div class="title-bar"><div class="title-bar-text">aboutme.html</div><div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
+        <button aria-label="Close" onclick="this.parentNode.parentNode.parentNode.remove(this)"></button>
+      </div></div>
+      <div class="window-body flexible" style="margin:0;padding:0;">
+        <img class="flexing" src="${path}">
+      </div>
+    </div>`
+  }
+}
+console.log(openImage("test"))
 $( function() {
   // $( ".iconClickable" ).draggable();
 });
