@@ -253,7 +253,7 @@ function openFile(path, ext) {
         <button aria-label="Close" onclick="this.parentNode.parentNode.parentNode.remove(this)"></button>
       </div></div>
       <div class="window-body flexible" style="margin:0;padding:0;">
-        <img class="flexing" src="${path}">
+        <img class="flexing" src="${path}" style="width:300px;height:auto;">
       </div>
     </div>`
   }
