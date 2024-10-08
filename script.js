@@ -258,7 +258,6 @@ function openFile(path, ext) {
     </div>`
   }
 }
-console.log(openImage("test"))
 $( function() {
   // $( ".iconClickable" ).draggable();
 });
