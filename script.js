@@ -184,7 +184,7 @@ var game = `<div class="window noselect">
         <iframe class="flexing" src="https://medv.io/bit-planes/">
       </div>
     </div>`
-var roulette = `<div class="window noselect">
+var roulette = `<div class="window noselect resizable">
       <div class="title-bar"><div class="title-bar-text">Bookmarklet Roulette</div><div class="title-bar-controls">
         <button aria-label="Minimize"></button>
         <button aria-label="Maximize"></button>
@@ -194,7 +194,7 @@ var roulette = `<div class="window noselect">
         <iframe style="overflow:none;margin:0;padding:0;"class="flexing" src="https://git.nihilogic.dk/wolf3d/">
       </div>
     </div>`
-var about = `<div class="window noselect">
+var about = `<div class="window noselect resizable">
       <div class="title-bar"><div class="title-bar-text">aboutme.html</div><div class="title-bar-controls">
         <button aria-label="Minimize"></button>
         <button aria-label="Maximize"></button>
