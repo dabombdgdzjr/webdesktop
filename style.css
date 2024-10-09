@@ -38,9 +38,11 @@ body {
   background: white;
   background-image: linear-gradient(to bottom right, #006eff, #00d5ff);
   z-index: 9;
+  max-width:600px;
+  max-height:400px;
 }
 .flexible {
-  /*display: flex; width: 100%; height: 100%; flex-direction: column; overflow: hidden;*/
+  display: flex; width: 100%; height: 100%; flex-direction: column; overflow: hidden;
 }
 .title-bar {
   cursor: move;
@@ -50,8 +52,7 @@ body {
   padding:5px;
 }
 .window-body {
-  min-width:640px;
-  min-height:360px;
+  /* placeholder */
 }
 
 /*Resizeable*/
@@ -99,11 +100,8 @@ body {
   supported by Chrome and Opera */
 }
 .flexing {
-  /*flex-grow: 1;
-  border: none;*/
-  width:100%;
-  height:auto;
-  display:block;
+  flex-grow: 1;
+  border: none;
   margin: 0;
   padding: 0;
 }
