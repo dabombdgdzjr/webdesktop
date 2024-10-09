@@ -235,14 +235,14 @@ function createElementFromHTML(htmlString) {
   return div.firstChild;
 }
 
-function createNewWindow(windowType) {
+function createNewWindow(windowType, resizable) {
   var theWindow = createElementFromHTML(windowType)
   document.body.appendChild(theWindow);
 
 
   tabWork();
   initDragElement("window", "title-bar");
-  initResizeElement("window");
+  initResizeElement("resizable");
 }
 function openFile(path, ext) {
   if (ext == "jpg" || ext == "png"){
@@ -253,7 +253,7 @@ function openFile(path, ext) {
         <button aria-label="Close" onclick="this.parentNode.parentNode.parentNode.remove(this)"></button>
       </div></div>
       <div class="window-body flexible" style="margin:5px;padding:0;max-width:600px;max-height:400px;">
-        <img class="flexing" src="${path}">
+        <img class="flexing stupidImage" src="${path}">
       </div>
     </div>`
   }
