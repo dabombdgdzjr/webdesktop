@@ -13,9 +13,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  
 }
-
 .iconContainer {
   display: flex;
   justify-content: start;
@@ -31,7 +29,13 @@ body {
 .iconText {
   margin:5px;
   margin-top:-5px;
-  font-size:13px;
+  font-size:20px;
+  font-family:"PixelatedTahoma";
+  color:black;
+}
+@font-face {
+  font-family: 'PixelatedTahoma'; /*a name to be used later*/
+  src: url('/C:/Fonts/windows-xp-tahoma.ttf'); /*URL to font*/
 }
 .iconClickable {
   width:60px;
@@ -116,4 +120,77 @@ body {
 
 
 
-/* Style page content */
+.bigComputer {
+  text-align:center;
+}
+.computerHolder {
+  justify-content:center;
+  text-align:center;
+  width:100%;
+  height:100%;
+}
+
+
+/* 7.CSS STYLING FOR ELEMENTS THAT ARE NOT IN XP.CSS. HOPEFULLY WILL HAVE THESE RESTYLED TO FIT THE XP.CSS THEME SOMETIME SOON */
+fieldset{
+  border:1px solid rgb(128,128,128);
+  border-radius:var(--border-radius);
+  /*box-shadow:inset 0 0 0 1px #fff;*/
+  margin:0;padding:calc(var(--border-width)*2 + var(--element-spacing));
+  -webkit-padding-before:var(--element-spacing);
+  padding-block-start:var(--element-spacing)
+}
+fieldset legend{
+  /*font:var(--font)*/
+  font-family:Tahoma;
+}
+.field-row{
+  align-items:center;
+  display:flex
+}
+.field-row>*+*{
+  margin-left:var(--grouped-element-spacing)
+}
+.field-row-stacked{
+  display:flex;
+  flex-direction:column
+}
+.field-row-stacked *+*,[class^=field-row]+[class^=field-row]{
+  margin-top:var(--grouped-element-spacing)
+}
+[role=listbox],select[multiple]{
+  background:#fff;
+  border:1px solid rgb(128,128,128);
+  display:block;
+  font:var(--font);
+  overflow-y:scroll
+}
+/*
+[role=listbox].has-shadow,select[multiple].has-shadow{
+  box-shadow:4px 4px 3px -2px #999
+}*/
+[role=listbox].has-hover li:hover,select[multiple].has-hover li:hover{
+  background-color: rgb(49,106,197);
+  color:rgb(255,255,255);
+}
+[role=listbox]:focus,select[multiple]:focus{
+  outline:none
+}
+[role=listbox] [role=option],[role=listbox] option,select[multiple] [role=option],select[multiple] option{
+  padding:2px
+}
+[role=listbox] [role=option]:focus,[role=listbox] [role=option][aria-selected],[role=listbox] option:focus,[role=listbox] option[aria-selected],select[multiple] [role=option]:focus,select[multiple] [role=option][aria-selected],select[multiple] option:focus,select[multiple] option[aria-selected]{
+  background-color:rgb(49,106,197);
+  color:#fff
+}
+:root{
+  --menu-padding:2px;
+  --item-offset-left:30px;
+  --item-hover-background:linear-gradient(180deg,#fff9,#e6ecf5cc 90%,#fffc)
+}
+ul[role]{
+  cursor:default;
+  list-style:none;
+  margin:0;
+  padding:0
+}

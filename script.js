@@ -167,7 +167,8 @@ var appearance = `<div class="window noselect resizable needMinHeight">
           <p>A theme is a background plus a set of sounds, icons, and other elements to help you personalize your computer with one click.<br><br>Theme:</p>
           <select>
             <option>Windows XP</option>
-            <option>Dark Windowx XP</option>
+            <option>Oive Green</option>
+            <option>Silver</option>
           </select>
           <button>Save As...</button>
           <button disabled>Delete</button>
@@ -191,11 +192,21 @@ var appearance = `<div class="window noselect resizable needMinHeight">
 
           </article>
           <article role="tabpanel" hidden id="tab-B">
-            
+          <div class="computerHolder">
+            <img src="/images/icons/computerBig.png" class="bigComputer">
+          </div>
+          <p>Background</p>
+          <ul role="listbox" class="has-shadow has-hover">
+            <li role="option"><img src="images/icons/TXT.png" style="width:16px;height:16px;">[None]</li>
+            <li role="option" aria-selected="true">linusXP.png</li>
+            <li role="option">liniss.png</li>
+            <li role="option">linus1.jpeg</li>
+            <li role="option">linux2.jpeg</li>
+          </ul>
           </article>
           <artice role="tabpanel" hidden id="tab-C"></article>
         </section>
-        <button style="float:right;margin-bottom:10px;margin-left:5px;margin-right:5px;">OK</button><button style="float:right;margin-bottom:10px;margin-left:5px;margin-right:5px;">Cancel</button><button style="float:right;margin-bottom:10px;margin-left:5px;margin-right:5px;">Apply</button>
+        <button style="float:right;margin-bottom:10px;margin-left:5px;margin-right:5px;">Apply</button><button style="float:right;margin-bottom:10px;margin-left:5px;margin-right:5px;" onclick="this.parentNode.parentNode.remove(this)">Cancel</button><button style="float:right;margin-bottom:10px;margin-left:5px;margin-right:5px;" onclick="this.parentNode.parentNode.remove(this)">OK</button>
       </div>
     </div>`
 var roulette = `<div class="window noselect resizable draggable">
@@ -208,6 +219,18 @@ var roulette = `<div class="window noselect resizable draggable">
         <iframe style="overflow:none;margin:0;padding:0;"class="flexing" src="https://git.nihilogic.dk/wolf3d/">
       </div>
     </div>`
+var credits = `<div class="window noselect resizable draggable">
+    <div class="title-bar draghandle"><div class="title-bar-text">Credits</div><div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close" onclick="this.parentNode.parentNode.parentNode.remove(this)"></button>
+    </div></div>
+    <div class="window-body flexible" style="padding:0;margin:10px;min-width:854px;min-height:480px;">
+      <p>FS-Tahoma-8px <a href="https://fontstruct.com/fontstructions/show/1888398/fs-tahoma-8px-9">Source</a> <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">License</a></p>
+      <p>Windows XP Visual Guidelines<a href="http://interface.free.fr/Archives/GUI_Xp.pdf">Source</a></p>
+      <p>GUIdebook <a href="https://guidebookgallery.org/screenshots/winxppro">Source</a></p>
+    </div>
+  </div>`
 var about = `<div class="window noselect resizable draggable needMinHeight">
       <div class="title-bar draghandle"><div class="title-bar-text">aboutme.html</div><div class="title-bar-controls">
         <button aria-label="Minimize"></button>
