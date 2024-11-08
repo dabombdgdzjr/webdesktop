@@ -1,45 +1,49 @@
 html {
   overflow:none;
-  cursor: url('/cursors/default_arrow.cur'),auto;
   width:100%;
   height:100%;
+  padding:0;
+  margin:0;
+}
+* {
+  cursor: url('/cursors/windows7_arrow.cur'),auto;
 }
 p {
   cursor: url('/cursors/beam_r.cur'),auto;
 }
 body {
-  background: url("/C:/wallpapers/linusXP.png") no-repeat center center fixed; 
+  background: url("/C:/wallpapers/linus.png") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  padding:0;
+  margin:0;
+  height:100%;
 }
 .iconContainer {
-  display: flex;
+  margin:20px;
+  display: grid;
+  grid-template-columns: repeat(10, 80px);
+  grid-template-rows: repeat(10, 80px);
   justify-content: start;
   align-items: center;
   text-align:center;
 }
 /*Drgable */
 .icondiv {
-  /*transform: translate(-48%, 0);*/
-
-  flex: 0 0 90px;
 }
 .iconText {
   margin:5px;
   margin-top:-5px;
-  font-size:20px;
-  font-family:"PixelatedTahoma";
-  color:black;
-}
-@font-face {
-  font-family: 'PixelatedTahoma'; /*a name to be used later*/
-  src: url('/C:/Fonts/windows-xp-tahoma.ttf'); /*URL to font*/
+  font-size:9pt;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:white;
+  text-shadow: black 2px 2px 2px;
 }
 .iconClickable {
-  width:60px;
-  height:60px;
+  width:48px;
+  height:48px;
   margin:5px;
 }
 
@@ -47,26 +51,16 @@ body {
   position: absolute;
   /*resize: both; !*enable this to css resize*! */
   overflow: hidden;
-  background: white;
-  background-image: linear-gradient(to bottom right, #006eff, #00d5ff);
-  z-index: 9;
-  width:600px;
+  z-index: 9999;
   height:auto;
+  top:20px;
 }
 .needMinHeight {
 
   min-width:500px;
   min-height:200px;
 }
-.window * {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
-  supported by Chrome and Opera */
-}
+
 .window .resizer-right {
   width: 5px;
   height: 100%;
@@ -100,13 +94,6 @@ body {
   background-color: deepskyblue;
   padding:5px;
 }
-.preview {
-  background: url("/C:/wallpapers/linusXP.png") no-repeat center center;
-  width:426px;
-  height:240px;
-  padding:0;
-  margin:0;
-}
 /*Resizeable*/
 
 
@@ -114,83 +101,35 @@ body {
   padding:0px;
   margin:0px;
 }
-/*NOSELECT*/
 
 
-
-
-
-.bigComputer {
-  text-align:center;
-}
-.computerHolder {
-  justify-content:center;
-  text-align:center;
-  width:100%;
-  height:100%;
-}
-
-
-/* 7.CSS STYLING FOR ELEMENTS THAT ARE NOT IN XP.CSS. HOPEFULLY WILL HAVE THESE RESTYLED TO FIT THE XP.CSS THEME SOMETIME SOON */
-fieldset{
-  border:1px solid rgb(128,128,128);
-  border-radius:var(--border-radius);
-  /*box-shadow:inset 0 0 0 1px #fff;*/
-  margin:0;padding:calc(var(--border-width)*2 + var(--element-spacing));
-  -webkit-padding-before:var(--element-spacing);
-  padding-block-start:var(--element-spacing)
-}
-fieldset legend{
-  /*font:var(--font)*/
-  font-family:Tahoma;
-}
-.field-row{
-  align-items:center;
-  display:flex
-}
-.field-row>*+*{
-  margin-left:var(--grouped-element-spacing)
-}
-.field-row-stacked{
-  display:flex;
-  flex-direction:column
-}
-.field-row-stacked *+*,[class^=field-row]+[class^=field-row]{
-  margin-top:var(--grouped-element-spacing)
-}
-[role=listbox],select[multiple]{
-  background:#fff;
-  border:1px solid rgb(128,128,128);
-  display:block;
-  font:var(--font);
-  overflow-y:scroll
-}
-/*
-[role=listbox].has-shadow,select[multiple].has-shadow{
-  box-shadow:4px 4px 3px -2px #999
-}*/
-[role=listbox].has-hover li:hover,select[multiple].has-hover li:hover{
-  background-color: rgb(49,106,197);
-  color:rgb(255,255,255);
-}
-[role=listbox]:focus,select[multiple]:focus{
-  outline:none
-}
-[role=listbox] [role=option],[role=listbox] option,select[multiple] [role=option],select[multiple] option{
-  padding:2px
-}
-[role=listbox] [role=option]:focus,[role=listbox] [role=option][aria-selected],[role=listbox] option:focus,[role=listbox] option[aria-selected],select[multiple] [role=option]:focus,select[multiple] [role=option][aria-selected],select[multiple] option:focus,select[multiple] option[aria-selected]{
-  background-color:rgb(49,106,197);
-  color:#fff
-}
-:root{
-  --menu-padding:2px;
-  --item-offset-left:30px;
-  --item-hover-background:linear-gradient(180deg,#fff9,#e6ecf5cc 90%,#fffc)
-}
-ul[role]{
-  cursor:default;
-  list-style:none;
+#footer {
+  height: 50px;
+  position: absolute;
+  bottom:0%;
+  width: 100%;
   margin:0;
-  padding:0
+  padding:0;
+  display:grid;
+}
+#footer #footer-background {
+  box-shadow:black 4px -4px 5px;
+  backdrop-filter: blur(4px);
+  background-color:#0467cc;
+  opacity:30%;
+  padding:0;
+  margin:0;
+  width:100%;
+  height:50px;
+  position:absolute;
+  grid-column:1;
+  grid-row:1;
+}
+#footer #start-button {
+  left:0;
+  width:50px;
+  height:auto;
+  position:relative;
+  grid-column:1;
+  grid-row:1;
 }

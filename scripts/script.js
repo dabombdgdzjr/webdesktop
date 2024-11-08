@@ -148,90 +148,19 @@ function openTab(event, tab) {
 
 // WINDOW TYPES
 
-var appearance = `<div class="window noselect resizable needMinHeight">
-      <div class="title-bar draghandle"><div class="title-bar-text">Display Properties</div><div class="title-bar-controls">
-        <button aria-label="Help"></button>
-        <button aria-label="Close" onclick="this.parentNode.parentNode.parentNode.remove(this)"></button>
-
-      </div></div>
-      <div class="window-body flexible" style="margin:10px;padding:0;">
-        <section class="tabs flexing">
-          <menu role="tablist" aria-label="Sample Tabs">
-            <button role="tab" aria-selected="true" aria-controls="tab-A">Themes</button>
-            <button role="tab" aria-controls="tab-B">Desktop</button>
-            <button role="tab" aria-controls="tab-C">Screen Saver</button>
-            <button role="tab" aria-controls="tab-D">Appearance</button>
-            <button role="tab" aria-controls="tab-E">Settings</button>
-          </menu>
-          <article role="tabpanel" id="tab-A">
-          <p>A theme is a background plus a set of sounds, icons, and other elements to help you personalize your computer with one click.<br><br>Theme:</p>
-          <select>
-            <option>Windows XP</option>
-            <option>Oive Green</option>
-            <option>Silver</option>
-          </select>
-          <button>Save As...</button>
-          <button disabled>Delete</button>
-          <br><br>
-          <p>Sample:</p>
-          <div class="preview">
-            <div class="window" style="width:280px;height:100px;left:50px;bottom:100px;">
-              <div class="title-bar">
-                <div class="title-bar-text">Active Window</div>
-                <div class="title-bar-controls">
-                  <button aria-label="Minimize"></button>
-                  <button aria-label="Maximize"></button>
-                  <button aria-label="Close"></button>
-                </div>
-              </div>
-              <div class="window-body">
-                <p>There's so much room for activities!</p>
-            </div>
-</div>
-          </div>
-
-          </article>
-          <article role="tabpanel" hidden id="tab-B">
-          <div class="computerHolder">
-            <img src="/images/icons/computerBig.png" class="bigComputer">
-          </div>
-          <p>Background</p>
-          <ul role="listbox" class="has-shadow has-hover">
-            <li role="option"><img src="images/icons/TXT.png" style="width:16px;height:16px;">[None]</li>
-            <li role="option" aria-selected="true">linusXP.png</li>
-            <li role="option">liniss.png</li>
-            <li role="option">linus1.jpeg</li>
-            <li role="option">linux2.jpeg</li>
-          </ul>
-          </article>
-          <artice role="tabpanel" hidden id="tab-C"></article>
-        </section>
-        <button style="float:right;margin-bottom:10px;margin-left:5px;margin-right:5px;">Apply</button><button style="float:right;margin-bottom:10px;margin-left:5px;margin-right:5px;" onclick="this.parentNode.parentNode.remove(this)">Cancel</button><button style="float:right;margin-bottom:10px;margin-left:5px;margin-right:5px;" onclick="this.parentNode.parentNode.remove(this)">OK</button>
-      </div>
-    </div>`
-var roulette = `<div class="window noselect resizable draggable">
-      <div class="title-bar draghandle"><div class="title-bar-text">Bookmarklet Roulette</div><div class="title-bar-controls">
-        <button aria-label="Minimize"></button>
-        <button aria-label="Maximize"></button>
-        <button aria-label="Close" onclick="this.parentNode.parentNode.parentNode.remove(this)"></button>
-      </div></div>
-      <div class="window-body flexible" style="padding:0;margin:0;min-width:854px;min-height:480px;">
-        <iframe style="overflow:none;margin:0;padding:0;"class="flexing" src="https://git.nihilogic.dk/wolf3d/">
-      </div>
-    </div>`
-var credits = `<div class="window noselect resizable draggable">
+var credits = `<div class="window noselect resizable draggable glass">
     <div class="title-bar draghandle"><div class="title-bar-text">Credits</div><div class="title-bar-controls">
       <button aria-label="Minimize"></button>
       <button aria-label="Maximize"></button>
       <button aria-label="Close" onclick="this.parentNode.parentNode.parentNode.remove(this)"></button>
     </div></div>
-    <div class="window-body flexible" style="padding:0;margin:10px;min-width:854px;min-height:480px;">
-      <p>FS-Tahoma-8px <a href="https://fontstruct.com/fontstructions/show/1888398/fs-tahoma-8px-9">Source</a> <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">License</a></p>
+    <div class="window-body flexible has-space">
+      <p>Windows 7 Icons<a href="https://www.deviantart.com/mucksponge/art/Windows-7-Official-256x256-Icons-PNG-123316986">Source</a></p>
       <p>Windows XP Visual Guidelines<a href="http://interface.free.fr/Archives/GUI_Xp.pdf">Source</a></p>
       <p>GUIdebook <a href="https://guidebookgallery.org/screenshots/winxppro">Source</a></p>
     </div>
   </div>`
-var about = `<div class="window noselect resizable draggable needMinHeight">
+var about = `<div class="window noselect resizable draggable needMinHeight active">
       <div class="title-bar draghandle"><div class="title-bar-text">aboutme.html</div><div class="title-bar-controls">
         <button aria-label="Minimize"></button>
         <button aria-label="Maximize"></button>
@@ -249,7 +178,7 @@ var about = `<div class="window noselect resizable draggable needMinHeight">
           <article role="tabpanel" id="tab-A" style="margin-right:10px;">
             <h3>About Me</h3>
             <p>
-             I am a student programmer who codes on <a src="https://replit.com">Replit</a>. I mainly program in <a src="https://python.org" target="_blank">Python</a> but also code in <a src="https://www.w3.org/html/" target="_blank">HTML</a>, <a src="https://www.w3.org/css/" target="_blank">CSS</a>, and <a src="https://www.javascript.com" target="_blank">JavaScript</a>.
+             I am a student programmer. I program in <a href="https://python.org" target="_blank">Python</a>, <a src="https://www.w3.org/html/" target="_blank">HTML</a>, <a src="https://www.w3.org/css/" target="_blank">CSS</a>, and <a src="https://www.javascript.com" target="_blank">JavaScript</a>.
             </p>
           </article>
           <article role="tabpanel" hidden id="tab-B">
@@ -265,13 +194,21 @@ var about = `<div class="window noselect resizable draggable needMinHeight">
       </div>
     </div>`
 
+$(initDraggable = function() {
+  $(".draggable").draggable({
+    handle: '.draghandle',
+    cursor: 'move',
+    stack: ".window",
+    distance: 0
+  });
+});
 function createElementFromHTML(htmlString) {
   var div = document.createElement('div');
   div.innerHTML = htmlString.trim();
-
   // Change this to div.childNodes to support multiple top-level nodes.
   return div.firstChild;
 }
+
 function createNewWindow(windowType) {
   var theWindow = createElementFromHTML(windowType)
   document.body.appendChild(theWindow);
@@ -279,29 +216,85 @@ function createNewWindow(windowType) {
 
   tabWork();
   /*initDragElement("draggable", "draghandle");*/
-  $(function() {
-    $(".window").draggable({
-      handle: '.draghandle',
-      cursor: 'move',
-      stack: ".window",
-      distance: 0
-    });
-  });
+  initDraggable();
   initResizeElement("resizable");
   initResizeElementWidthOnly("resizableWidth");
 }
 function openFile(path, ext) {
-  if (ext == "jpg" || ext == "png"){
-    return `<div class="window noselect draggable resizableWidth">
+  if (ext == "img"){
+    console.log(path)
+    return `<div class="window active noselect resizableWidth draggable glass" style="width:500px;">
+    <div class="title-bar draghandle">
+      <div class="title-bar-text">A window with contents</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
+        <button aria-label="Close" onclick="this.parentNode.parentNode.parentNode.remove(this)"></button>
+      </div>
+    </div>
+    <div class="window-body" style="justify-content:center;text-align:center;">
+    <ul role="menubar" class="can-hover">
+  <li role="menuitem" tabindex="0" aria-haspopup="true">
+    File
+    <ul role="menu">
+      <li role="menuitem">
+        <a href="#menubar">
+          Open <span>Ctrl+O</span>
+        </a>
+      </li>
+      <li role="menuitem">
+        <a href="${path}" download>
+          Save <span>Ctrl+S</span>
+        </a>
+      </li>
+      <li role="menuitem" class="has-divider">
+        <a href="${path}">
+          Save As... <span>Ctrl+Shift+S</span>
+        </a>
+      </li>
+      <li role="menuitem"><a href="#menubar">Exit</a></li>
+    </ul>
+  </li>
+  <li role="menuitem" tabindex="0" aria-haspopup="true">
+    Print
+    <ul role="menu">
+      <li role="menuitem"><a href="#menubar">Undo</a></li>
+    </ul>
+  </li>
+  <li role="menuitem" tabindex="0" aria-haspopup="false">E-Mail</li>
+  <li role="menuitem" tabindex="0" aria-haspopup="true">
+    Burn
+    <ul role="menu">
+      <li role="menuitem"><a href="#menubar">View Help</a></li>
+      <li role="menuitem"><a href="#menubar">About</a></li>
+    </ul>
+  </li>
+  <li role="menuitem" tabindex="0" aria-haspopup="true">
+    Open
+    <ul role="menu">
+      <li role="menuitem"><a href="#menubar">View Help</a></li>
+      <li role="menuitem"><a href="#menubar">About</a></li>
+    </ul>
+  </li>
+</ul>
+      <img src="${path}" style="width:calc(100% - 6px);height:auto;margin:0;padding:0;"></img>
+    </div>
+  </div>`
+  }
+  if (ext="txt") {
+    return `<div c`
+  }
+}
+/*
+<div class="window noselect draggable resizableWidth active">
       <div class="title-bar draghandle"><div class="title-bar-text">Image Viewer - ${path}</div><div class="title-bar-controls">
         <button aria-label="Minimize"></button>
         <button aria-label="Maximize"></button>
         <button aria-label="Close" onclick="this.parentNode.parentNode.parentNode.remove(this)"></button>
       </div></div>
-      <!--<div class="window-body" style="background: url('/images/photos/DSC_0006.JPG') no-repeat center center fixed;margin:0px;padding:0;width:100%;height:100%;">-->
       <div class="window-body" style="margin:0px;padding:0;width:100%;height:100%;justify-content:center;text-align:center;">
-      <img src="${path}" style="width:calc(100% - 6px);height:auto;margin:0;padding:0;margin-left:-1px;margin-bottom:-3px;">
+      
       </div>
-    </div>`
-  }
-}
+    </div>
+    */
+
