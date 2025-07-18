@@ -1,0 +1,33 @@
+<div class="window noselect resizable draggable needMinHeight active">
+    <div class="title-bar draghandle"><div class="title-bar-text">aboutme.html</div><div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close" onclick="this.parentNode.parentNode.parentNode.remove(this)"></button>
+
+    </div></div>
+    <div class="window-body">
+      <section class="tabs">
+        <menu role="tablist" aria-label="Sample Tabs">
+          <button role="tab" aria-selected="true" aria-controls="tab-A">About Me</button>
+          <button role="tab" aria-controls="tab-B">Projects</button>
+          <button role="tab" aria-controls="tab-C">Contact</button>
+        </menu>
+        <!-- the tab content -->
+        <article role="tabpanel" id="tab-A" style="margin-right:10px;">
+          <h3>About Me</h3>
+          <p>
+           I am a student programmer. I program in <a href="https://python.org" target="_blank">Python</a>, <a src="https://www.w3.org/html/" target="_blank">HTML</a>, <a src="https://www.w3.org/css/" target="_blank">CSS</a>, and <a src="https://www.javascript.com" target="_blank">JavaScript</a>.
+          </p>
+        </article>
+        <article role="tabpanel" hidden id="tab-B">
+          <h3>Projects</h3>
+          <p>My projects are actually around on this webpage. Click around and find them!</p>
+
+        </article>
+        <article role="tabpanel" hidden id="tab-C">
+          <h3>Contacts</h3>
+          <p>Discord: LoremIpsum<br>Email:LoremIpsum@dolor.com<br>Phone Number: 012-345-6789</p>
+        </article>
+      </section>
+    </div>
+  </div>

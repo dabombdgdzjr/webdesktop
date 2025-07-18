@@ -1555,7 +1555,8 @@
     border: var(--window-border) var(--window-border-color);
     box-shadow: 0 0 0 1px #fff9;
     margin: var(--window-spacing);
-    margin-top: 0
+    margin-top: 0;
+    height:calc(100% - 35px);
   }
   
   .window-body.has-space {
