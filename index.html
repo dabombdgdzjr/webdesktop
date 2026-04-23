@@ -58,6 +58,16 @@ Psssst! This website is open source. Visit https://github.com/dabombdgdzjr/webde
       <img src="/images/icons/start-button.png" id="start-button">
       <div id="footer-background"></div>
     </div>
+    <div class="window noselect resizable draggable active">
+      <div class="title-bar draghandle"><div class="title-bar-text">Credits</div><div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
+        <button aria-label="Close" onclick="this.parentNode.parentNode.parentNode.remove(this)"></button>
+      </div></div>
+      <div class="window-body flexible has-space">
+        <p>Double click on any icon to open it</p>
+      </div>
+    </div>
     <!-- RIGHT CLICK -->
     <ul role="menu" class="can-hover" id="contextMenu" style="width: 200px;display: none;position:absolute;">
       <li role="menuitem" tabindex="0" aria-haspopup="true">

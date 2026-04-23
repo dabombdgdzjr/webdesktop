@@ -59,9 +59,8 @@ body {
   user-select: none; /* Standard syntax */
 }
 .needMinHeight {
-
   min-width:500px;
-  min-height:200px;
+  min-height:100px;
 }
 
 .window .resizer-right {
