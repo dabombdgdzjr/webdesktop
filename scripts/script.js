@@ -107,6 +107,7 @@ function initResizeElementWidthOnly(classr) {
     document.documentElement.removeEventListener("mouseup", stopDrag, false);
   }
 }
+
 // TESTING
 function tabWork() {
   const tabs = document.querySelectorAll("menu[role=tablist]");
@@ -158,7 +159,6 @@ function loadFile(filePath) {
 // WINDOW TYPES
 
 var credits = loadFile("Windows/credits.html")
-console.log(credits)
 var about = loadFile("Windows/about.html")
 var emailAttach = loadFile("Windows/emailAttach.html")
 
